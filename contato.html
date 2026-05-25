@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - AgroSustentável</title>
+    <title>Contato e FAQ - AgroSustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,32 +27,66 @@
 
     <main>
         <section class="content-section">
-            <h1>Entre em Contato</h1>
-            <p>Tem dúvidas ou sugestões sobre como podemos construir um futuro mais sustentável para o agronegócio? Envie sua mensagem!</p>
+            <h1>Perguntas Frequentes (FAQ)</h1>
+            <p>Tire suas dúvidas rápidas sobre o agronegócio sustentável e nossas tecnologias.</p>
             
+            <br>
+            <div class="faq-container">
+                <div class="card faq-item">
+                    <h4 class="faq-question">O que é o Efeito Poupa-Terra?</h4>
+                    <p>É o fenômeno onde o aumento da produtividade por hectare permite produzir mais alimentos sem precisar desmatar novas áreas, "poupando" a terra para a conservação.</p>
+                </div>
+                <div class="card faq-item">
+                    <h4 class="faq-question">O agronegócio realmente sequestra carbono?</h4>
+                    <p>Sim! Através do Plantio Direto e da ILPF, o solo acumula matéria orgânica que retira o CO2 da atmosfera, transformando a fazenda em um dreno de carbono.</p>
+                </div>
+                <div class="card faq-item">
+                    <h4 class="faq-question">Como os drones ajudam o meio ambiente?</h4>
+                    <p>Eles permitem a aplicação localizada de insumos. Em vez de pulverizar a fazenda inteira, o drone aplica apenas onde é necessário, reduzindo o uso de químicos.</p>
+                </div>
+                <div class="card faq-item">
+                    <h4 class="faq-question">O que é Reserva Legal?</h4>
+                    <p>É uma área de vegetação nativa que todo imóvel rural no Brasil deve preservar, variando de 20% a 80% da área total, dependendo do bioma.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section mt-2">
+            <h1>Fale Conosco</h1>
+            <p>Ainda tem dúvidas? Nossa equipe de especialistas está pronta para responder suas questões técnicas ou comerciais.</p>
+            
+            <div class="card-container mb-2">
+                <div class="card">
+                    <h3>Suporte Técnico</h3>
+                    <p>E-mail: tecnico@agrosustentavel.com.br<br>WhatsApp: (61) 99999-8888</p>
+                </div>
+                <div class="card">
+                    <h3>Imprensa e Parcerias</h3>
+                    <p>E-mail: media@agrosustentavel.com.br<br>Telefone: (61) 3333-4444</p>
+                </div>
+            </div>
+
             <form class="contact-form" id="contactForm">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required placeholder="Digite seu nome">
                 
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required placeholder="seu@email.com">
                 
-                <label for="subject">Assunto:</label>
-                <input type="text" id="subject" name="subject" required placeholder="Assunto da mensagem">
-                
-                <label for="message">Mensagem:</label>
+                <label for="message">Sua Mensagem:</label>
                 <textarea id="message" name="message" rows="5" required placeholder="Como podemos ajudar?"></textarea>
                 
                 <button type="submit">Enviar Mensagem</button>
             </form>
-            <div id="formResponse" style="display:none; text-align:center; margin-top:20px; color: var(--primary-color); font-weight:bold;">
-                Mensagem enviada com sucesso! Agradecemos seu contato.
+            <div id="formResponse" class="form-response-box">
+                <h3 class="logo">Mensagem Recebida!</h3>
+                <p>Obrigado por contribuir para um futuro mais sustentável.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 AgroSustentável - Todos os direitos reservados.</p>
+        <p>&copy; 2026 AgroSustentável - Inovação e Respeito ao Meio Ambiente.</p>
     </footer>
 
     <div id="ai-chat-toggle">🤖</div>
@@ -62,11 +96,11 @@
             <button id="ai-chat-close">&times;</button>
         </div>
         <div id="ai-chat-messages">
-            <p><strong>IA:</strong> Olá! Como posso ajudar você hoje sobre o agronegócio sustentável?</p>
+            <p><strong>IA:</strong> Olá! Sou o especialista virtual em Agro Sustentável. Como posso ajudar você hoje?</p>
         </div>
         <div id="ai-chat-input-area">
-            <input type="text" id="ai-chat-input" placeholder="Digite sua pergunta...">
-            <button id="ai-chat-send" class="button">Enviar</button>
+            <input type="text" id="ai-chat-input" placeholder="Pergunte sobre tecnologia, solo...">
+            <button id="ai-chat-send">Enviar</button>
         </div>
     </div>
 

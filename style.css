@@ -394,3 +394,93 @@ footer {
         padding: 3rem 1rem;
     }
 }
+
+/* --- CLASSES PARA SUBSTITUIR ESTILOS INLINE --- */
+
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.text-center { text-align: center; }
+.font-large { font-size: 2.5rem; }
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--neon-green);
+}
+
+.custom-table th {
+    background: var(--dark-green);
+    padding: 10px;
+    border: 1px solid var(--neon-green);
+}
+
+.custom-table td {
+    padding: 10px;
+    border: 1px solid var(--neon-green);
+}
+
+.card-highlight-green {
+    border-left: 5px solid var(--neon-green);
+}
+
+.card-dark-bg {
+    background: var(--dark-green);
+}
+
+.card-dashed-border {
+    border: 2px dashed var(--neon-green);
+}
+
+.card-black-bg {
+    background: #050505;
+    border: 1px solid var(--neon-green);
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    color: var(--neon-green);
+}
+
+.form-select {
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #39ff14;
+    color: var(--neon-green);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.form-response-box {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--neon-green);
+    font-weight: bold;
+    border: 1px solid var(--neon-green);
+    padding: 20px;
+}
+
+.ai-msg-container {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.ai-msg-ia {
+    background-color: #003300;
+    border: 1px solid #39ff14;
+}
+
+.ai-msg-user {
+    background-color: #111;
+    border: 1px solid #555;
+}
