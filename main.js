@@ -37,3 +37,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+    // Lógica do Menu Hamburguer para Mobile
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            
+            // Animação simples do ícone (opcional)
+            const spans = mobileMenu.querySelectorAll('span');
+            spans.forEach(span => span.classList.toggle('active'));
+        });
+    }
+
+    // Fechar menu ao clicar em um link (importante para mobile)
+    document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('active');
+        });
+    });

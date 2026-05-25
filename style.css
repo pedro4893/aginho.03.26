@@ -304,3 +304,93 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--neon-green);
 }
+
+/* --- RESPONSIVIDADE MOBILE --- */
+
+/* Menu Hamburguer (Escondido por padrão no Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--neon-green);
+    box-shadow: 0 0 5px var(--neon-green);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: #000;
+        border-left: var(--border-neon);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    #ai-chat-widget {
+        width: 90%;
+        right: 5%;
+        bottom: 90px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .hero {
+        padding: 3rem 1rem;
+    }
+}
