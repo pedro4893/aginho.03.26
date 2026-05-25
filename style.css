@@ -1,0 +1,306 @@
+:root {
+    --primary-color: #000000;
+    --neon-green: #39ff14;
+    --dark-green: #003300;
+    --text-color: #39ff14;
+    --bg-color: #000000;
+    --card-bg: #0a0a0a;
+    --border-neon: 1px solid #39ff14;
+    --neon-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Fonte mais 'tech' */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--neon-green);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: var(--border-neon);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: var(--neon-shadow);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--neon-green);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    text-shadow: var(--neon-shadow);
+    color: #ffffff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--neon-green);
+    border: var(--border-neon);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: var(--neon-shadow);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: var(--neon-shadow);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border: var(--border-neon);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--neon-shadow);
+}
+
+.card h2, .card h3 {
+    color: var(--neon-green);
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #39ff14;
+}
+
+.card a {
+    color: var(--neon-green);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.content-section {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    border: var(--border-neon);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+.content-section h1 {
+    color: var(--neon-green);
+    margin-bottom: 25px;
+    text-shadow: var(--neon-shadow);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--neon-green);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: var(--border-neon);
+}
+
+/* AI Chat Widget */
+#ai-chat-widget {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 320px;
+    background: #000;
+    border: var(--border-neon);
+    border-radius: 10px;
+    box-shadow: var(--neon-shadow);
+    display: none;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+#ai-chat-widget.visible {
+    display: flex;
+}
+
+#ai-chat-header {
+    background: var(--dark-green);
+    color: var(--neon-green);
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border-neon);
+}
+
+#ai-chat-header button {
+    background: none;
+    border: none;
+    color: var(--neon-green);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#ai-chat-messages {
+    height: 250px;
+    overflow-y: auto;
+    padding: 15px;
+    font-size: 0.9rem;
+    background-color: #050505;
+    color: var(--neon-green);
+}
+
+#ai-chat-input-area {
+    display: flex;
+    padding: 12px;
+    border-top: var(--border-neon);
+    background: #000;
+}
+
+#ai-chat-input {
+    flex: 1;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #39ff14;
+    border-radius: 4px;
+    color: var(--neon-green);
+}
+
+#ai-chat-send {
+    margin-left: 10px;
+    background: var(--dark-green);
+    color: var(--neon-green);
+    border: var(--border-neon);
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#ai-chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #000;
+    color: var(--neon-green);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: var(--border-neon);
+    box-shadow: var(--neon-shadow);
+    z-index: 2001;
+    font-size: 2rem;
+}
+
+/* Formulário de Contato */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #0a0a0a;
+    padding: 35px;
+    border-radius: 8px;
+    border: var(--border-neon);
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--neon-green);
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #39ff14;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--neon-green);
+}
+
+.contact-form button {
+    padding: 15px 20px;
+    background-color: var(--dark-green);
+    color: var(--neon-green);
+    border: var(--border-neon);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--neon-green);
+    color: #000;
+    box-shadow: var(--neon-shadow);
+}
+
+#formResponse {
+    text-shadow: 0 0 5px #39ff14;
+}
+
+/* Scrollbar Neon */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--dark-green);
+    border: 1px solid var(--neon-green);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-green);
+}
